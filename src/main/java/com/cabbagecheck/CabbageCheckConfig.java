@@ -4,16 +4,17 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
-public interface ExampleConfig extends Config
+@ConfigGroup("cabbage")
+public interface CabbageCheckConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+			keyName = "removeEatOption",
+			name = "Remove Eat Option",
+			description = "Removes the 'Eat' option for cabbages.",
+			position = 1
 	)
-	default String greeting()
+	default boolean removeEatOption()
 	{
-		return "Hello";
+		return true;
 	}
 }
